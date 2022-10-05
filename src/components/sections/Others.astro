@@ -1,0 +1,32 @@
+---
+import SecctionRoot from './SectionRoot.astro';
+
+const webInfoList = [
+  {
+    name: '技術ブログ',
+    url: 'https://karukichi-blog.netlify.app/',
+  },
+  {
+    name: 'Twitter',
+    url: 'https://twitter.com/karukichi_yah',
+  },
+  {
+    name: 'GitHub',
+    url: 'https://github.com/Yota-K/portfolio',
+  },
+];
+---
+
+<SecctionRoot heading="Others">
+  <ul>
+    {
+      webInfoList.map((link) => (
+        <li>
+          <a href={link.url} class="cursor-pointer font-bold">
+            {link.name}
+          </a>
+        </li>
+      ))
+    }
+  </ul>
+</SecctionRoot>

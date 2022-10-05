@@ -1,0 +1,12 @@
+---
+type Props = {
+  heading: 'Profile' | 'Career' | 'Skills' | 'Others' | 'Contact';
+};
+const { heading } = Astro.props;
+const id = heading.toLowerCase();
+---
+
+<section class="my-8">
+  <h2 id={id} class="text-2xl mb-4 font-bold">{heading}</h2>
+  <slot />
+</section>

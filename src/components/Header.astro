@@ -1,20 +1,25 @@
 ---
+import { app } from '../config/app';
+
 const links = [
-  { href: '#profile', name: 'Profile' },
+  { hrf: '#profile', name: 'Profile' },
   { href: '#career', name: 'Career' },
   { href: '#skills', name: 'Skills' },
+  { href: '#others', name: 'Others' },
   { href: '#contact', name: 'Contact' },
 ];
 ---
 
-<header class="mb-10 p-3">
-  <div class="flex justify-between">
-    <h1 class="text-3xl font-bold">My Portfolio</h1>
+<header class="mb-10 p-3 shadow-lg">
+  <div class="lg:flex justify-between items-center p-2 m-auto w-10/12 lg:w-7/12">
+    <h1 class="text-xl font-bold">{app.title}</h1>
     <ul class="flex">
       {
         links.map((link) => (
-          <li>
-            <a href={link.href}>{link.name}</a>
+          <li class="px-2 first-of-type:pl-0">
+            <a href={link.href} class="cursor-pointer font-bold">
+              {link.name}
+            </a>
           </li>
         ))
       }

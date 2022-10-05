@@ -1,5 +1,11 @@
 ---
 import Layout from '../components/Layout.astro';
+
+import Profile from '../components/sections/Profile.astro';
+import Career from '../components/sections/Career.astro';
+import Skills from '../components/sections/Skills.astro';
+import Others from '../components/sections/Others.astro';
+import Contact from '../components/sections/Contact.astro';
 ---
 
 <html lang="ja">
@@ -8,44 +14,15 @@ import Layout from '../components/Layout.astro';
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
-    <title>My Portfolio</title>
+    <title>Karukichi Soejima Portfolio</title>
   </head>
   <body>
     <Layout>
-      <h2 id="#profile" class="text-2xl">Profile</h2>
-      <div>
-        <p>東京都で活動するウェブ開発者です。</p>
-        <h3 class="font-bold">得意な領域</h3>
-        <p>ウェブのフロントエンド領域が比較的得意です。</p>
-        <p>アプリケーション・ウェブサイト両方の構築が可能です。</p>
-        <h3 class="font-bold">好きな技術</h3>
-        <p>特に、CSS・TypeScript・React・Jamstack・サーバレス・Vim (Neovim)あたりが好きです。</p>
-        <p>最近はデザインにも興味が出てきました。</p>
-      </div>
-      <h2 id="#career" class="text-2xl">Career</h2>
-      <div>
-        <p>2018年: 駒澤大学仏教学部を卒業</p>
-        <p>2018年 〜 2019年: ウェブ制作会社で簡単なHTML・CSSコーディングと記事案の執筆を行っていました。</p>
-        <p>
-          2020年 〜 2021年:
-          ウェブエンジニア1年目はWordPressを使ったサイト構築を主に行っていました。WordPressを用いたサイト制作と並行して、Laravelを使った社内ツールの開発や、GatsbyJSを使ったサイトのフロントエンド・バックエンドの改修も行いました。
-        </p>
-        <p>
-          2022年 〜:
-          自社SaaSアプリを開発する企業に転職して、アプリケーションのフロントエンド開発を行っています。主にTypeScript、React、NextJSを使用しています。
-        </p>
-      </div>
-      <h2 id="#skills" class="text-2xl">Skills</h2>
-      <h3>Frontend</h3>
-      <h3>Backend</h3>
-      <h3>Cloud</h3>
-      <h3>Others</h3>
-      <h2 id="#contact" class="text-2xl">Contact</h2>
-      <p>
-        仕事の依頼は
-        <a href="mailto:powdersugar828828@gmail.com">powdersugar828828@gmail.com</a>
-        かTwitterのDMまでお願いします。
-      </p>
+      <Profile />
+      <Career />
+      <Skills />
+      <Others />
+      <Contact />
     </Layout>
   </body>
 </html>
